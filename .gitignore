@@ -1,0 +1,16 @@
+node_modules
+**/.wwebjs_auth/** 
+**/.wwebjs_auth/*
+**/.wwebjs_cache/**
+**/.wwebjs_cache/*
+**/.wwebjs_auth/session-1/**
+**/logs/**
+**/logs/*
+**/temp/**
+**/iisnode/**
+**/iisnode/*
+frontend/node_modules/*
+frontend/vite/**
+frontend/vite/*
+frontend/dist/*
+frontend/.angular/**

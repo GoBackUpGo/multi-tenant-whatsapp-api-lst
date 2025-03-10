@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>User Registration</h2>
+    <form (ngSubmit)="register()">
+        <input [(ngModel)]="username" placeholder="Username" name="username" required />
+        <input [(ngModel)]="password" type="password" placeholder="Password" name="password" required />
+        <input [(ngModel)]="tenantName" placeholder="Tenant Name" name="tenantName" required />
+        <button type="submit">Register</button>
+    </form>
+    <button routerLink="/login">Go to Login</button>
+</div>
+
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+</style>

@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>User Dashboard</h2>
+  <div>
+    <p>Welcome, {{ username }}</p> <!-- Display username -->
+    <p>Email: {{ email }}</p> <!-- Display email -->
+    <p>Phone: {{ phone }}</p> <!-- Display phone -->
+    <p>API Key: {{ apiKey }}</p> <!-- Display API key -->
+    <p>WhatsApp Status: {{ whatsappStatus }}</p> <!-- Display WhatsApp status -->
+    <button (click)="logout()">Logout</button> <!-- Logout button -->
+  </div>
+  <form (ngSubmit)="sendMessage()">
+    <input [(ngModel)]="phoneNumber" placeholder="Recipient Phone Number" name="phoneNumber" required />
+    <textarea [(ngModel)]="message" placeholder="Message" name="message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div>
+    <button (click)="generateQRCode()" *ngIf="whatsappStatus === 'disconnected'">Generate QR Code</button>
+    <div *ngIf="qrCode">
+      <img [src]="qrCode" alt="QR Code" />
+    </div>
+  </div>
+
+  <div>
+    <input [(ngModel)]="qrCode" placeholder="Scan QR Code" name="qrCode" />
+    <button (click)="scanQRCode(qrCode)">Scan QR Code</button>
+  </div>
+  <button routerLink="/monitoring-dashboard">Go to Monitoring Dashboard</button>
+</div>
+
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+</style>
