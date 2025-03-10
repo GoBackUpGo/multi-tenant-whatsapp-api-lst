@@ -123,7 +123,7 @@ app.get('/send-message', authMiddleware, async (req, res) => {
 });
 
 // Server Listen
-const PORT = 4000;
+const PORT = 4001;
 server.listen(PORT, () => {
     logger.info(`Server running on http://localhost:${PORT}`);
 });

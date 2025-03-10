@@ -15,7 +15,7 @@ class WhatsAppService
 
     public function __construct()
     {
-        $this->baseUrl = config('services.whatsapp.base_url', 'http://localhost:4000');
+        $this->baseUrl = config('services.whatsapp.base_url', 'http://localhost:4001');
         $this->apiKey = config('services.whatsapp.api_key');
 
         $this->client = new Client([

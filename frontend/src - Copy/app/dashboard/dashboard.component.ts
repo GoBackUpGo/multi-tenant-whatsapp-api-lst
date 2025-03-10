@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
     const token = this.authService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    this.http.get<{ apiKey: string }>('http://localhost:4000/tenant/api-key', { headers })
+    this.http.get<{ apiKey: string }>('http://localhost:4001/tenant/api-key', { headers })
       .subscribe(
         response => {
           this.apiKey = response.apiKey;

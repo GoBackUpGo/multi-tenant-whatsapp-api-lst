@@ -12,7 +12,7 @@ let tenantId = ''; // استبدل بـ tenantId الصحيح
 // دالة لتسجيل الدخول وتوليد token
 async function login() {
     try {
-        const response = await axios.post('http://localhost:4000/auth/login', {
+        const response = await axios.post('http://localhost:4001/auth/login', {
             username,
             password
         });
@@ -29,7 +29,7 @@ async function login() {
 // دالة لتحميل ملف الجلسة
 async function downloadSession() {
     try {
-        const response = await axios.get(`http://localhost:4000/whatsapp/download-session/${tenantId}`, {
+        const response = await axios.get(`http://localhost:4001/whatsapp/download-session/${tenantId}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             },
@@ -56,7 +56,7 @@ async function downloadSession() {
 // دالة للحصول على ملف الجلسة كبيانات ثنائية
 async function getSessionBinary() {
     try {
-        const response = await axios.get(`http://localhost:4000/whatsapp/get-session-binary/${tenantId}`, {
+        const response = await axios.get(`http://localhost:4001/whatsapp/get-session-binary/${tenantId}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             },
