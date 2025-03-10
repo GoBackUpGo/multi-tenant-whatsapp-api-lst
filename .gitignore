@@ -1,3 +1,6 @@
 node_modules
-backend\.wwebjs_auth
-frontend\node_modules
+**/.wwebjs_auth/*
+**/.wwebjs_auth/session-1/*
+
+**/logs/*
+frontend/node_modules/*

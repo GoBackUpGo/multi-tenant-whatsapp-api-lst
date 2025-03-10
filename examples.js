@@ -4,8 +4,8 @@ const path = require('path');
 const unzipper = require('unzipper');
 
 // بيانات تسجيل الدخول
-const username = 'zoheer'; // استبدل بـ username الصحيح
-const password = '127551'; // استبدل بـ password الصحيح
+const username = 'issa'; // استبدل بـ username الصحيح
+const password = '12345'; // استبدل بـ password الصحيح
 let token = ''; // سيتم تعيينه بعد تسجيل الدخول
 let tenantId = ''; // استبدل بـ tenantId الصحيح
 
