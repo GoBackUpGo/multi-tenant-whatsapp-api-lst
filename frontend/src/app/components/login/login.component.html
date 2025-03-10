@@ -1,0 +1,20 @@
+<!-- filepath: /src/app/components/login/login.component.html -->
+<div class="container">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()">
+    <input [(ngModel)]="username" placeholder="Username" name="username" required />
+    <input [(ngModel)]="password" type="password" placeholder="Password" name="password" required />
+    <button type="submit">Login</button>
+  </form>
+  <button routerLink="/register">Go to Register</button>
+</div>
+
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+</style>

@@ -1,0 +1,5 @@
+Initializing Sequelize...
+User model: User
+Tenant model: Tenant
+Message model: Message
+Admin model: Admin

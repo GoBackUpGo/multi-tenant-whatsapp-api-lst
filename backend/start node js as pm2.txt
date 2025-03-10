@@ -1,0 +1,6 @@
+
+pm2 start server.js --name "whatsapp-server"
+pm2 save
+pm2 logs whatsapp-server
+pm2 list
+pm2 stop all
