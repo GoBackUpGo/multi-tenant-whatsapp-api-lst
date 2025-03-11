@@ -129,7 +129,7 @@ router.post('/send-media', authMiddleware, apiKeyAuth, upload.single('file'), as
 
 // Send WhatsApp message with optional file
 router.post('/send-attch', authMiddleware, apiKeyAuth, upload.single('file'), async (req, res) => {
-    const { phoneNumber, message, msgId, machineName, docType, docSrl, cmpNo, brnNo, brnUsr, brnYear, adUsrId, mimeType, fileName } = req.body;
+    const { phoneNumber, message, msgId, machineName, docType, docSrl, cmpNo, brnNo, brnUsr, brnYear, adUsrId, billDate,billTime,billAmt,vatAmt,discAmt,cTaxCode,brnTaxCode,machineNo,terminal,billType,cashNo,brnLName,wCode,wName,uAName,customerNo,customerName , mimeType, fileName } = req.body;
     const tenantId = req.tenant.id;
     const userId = req.user.id;
     const file = req.file; // File is now in memory
@@ -183,6 +183,24 @@ router.post('/send-attch', authMiddleware, apiKeyAuth, upload.single('file'), as
             brnYear: brnYear || null,
             adUsrId: adUsrId || null,
             direction: 'OUTGOINING',
+            
+            BILL_DATE: billDate || null,
+            BILL_TIME: billTime || null,
+            BILL_AMT: billAmt || null,
+            VAT_AMT: vatAmt || null,
+            DISC_AMT: discAmt || null,
+            C_TAX_CODE: cTaxCode || null,
+            BRN_TAX_CODE: brnTaxCode || null,
+            MACHINE_NO: machineNo || null,
+            TERMINAL: terminal || null,
+            BILL_TYPE: billType || null,
+            CASH_NO: cashNo || null,
+            BRN_LNAME: brnLName || null,
+            W_CODE: wCode || null,
+            W_NAME: wName || null,
+            U_A_NAME: uAName || null,
+            CUSTOMER_NO: customerNo || null,
+            CUSTOMER_NAME: customerName || null
         });
 
         res.status(200).json({ message: 'Message sent successfully' });

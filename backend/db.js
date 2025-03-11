@@ -80,6 +80,24 @@ const Message = sequelize.define('Message', {
     whatsappGroupId: { type: DataTypes.STRING, allowNull: true },
     whatsappGroupMessageId: { type: DataTypes.STRING, allowNull: true },
     timestamp: { type: DataTypes.DATE, allowNull: true },
+    BILL_DATE: { type:  DataTypes.STRING, allowNull: true },
+    BILL_TIME: { type:  DataTypes.STRING, allowNull: true },
+    BILL_AMT: { type:  DataTypes.NUMERIC, allowNull: true },
+    VAT_AMT: { type:  DataTypes.NUMERIC, allowNull: true },
+    DISC_AMT: { type:  DataTypes.NUMERIC, allowNull: true },
+    C_TAX_CODE: { type:  DataTypes.STRING, allowNull: true },
+    BRN_TAX_CODE: { type:  DataTypes.STRING, allowNull: true },
+    MACHINE_NO: { type:  DataTypes.INTEGER, allowNull: true },
+    TERMINAL: { type:  DataTypes.STRING, allowNull: true },
+    BILL_TYPE: { type:  DataTypes.INTEGER, allowNull: true },
+    CASH_NO: { type:  DataTypes.INTEGER, allowNull: true },
+    BRN_LNAME: { type:  DataTypes.STRING, allowNull: true },
+    W_CODE: { type:  DataTypes.INTEGER, allowNull: true },
+    W_NAME: { type:  DataTypes.STRING, allowNull: true },
+    U_A_NAME: { type:  DataTypes.STRING, allowNull: true },
+    CUSTOMER_NO: { type:  DataTypes.STRING, allowNull: true },
+    CUSTOMER_NAME: { type:  DataTypes.STRING, allowNull: true },
+
 });
 
 const Session = sequelize.define('Session', {
