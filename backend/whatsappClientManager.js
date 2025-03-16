@@ -445,6 +445,9 @@ class WhatsAppClientManager {
     
             // Send the message
             if (file) {
+                console.log('fileName:',JSON.stringify(file.filename));
+                console.log('messageCaption:',message);
+
                 const media = new MessageMedia(file.mimetype, file.data, file.filename);
                 await client.sendMessage(formattedPhoneNumber, media, { caption: message });
             } else {
